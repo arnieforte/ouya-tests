@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import tv.ouya.console.api.*;
@@ -23,6 +24,8 @@ public class MainActivity extends Activity {
 		this.webView = (WebView) findViewById(R.id.webView1);
 		webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
 		webView.setBackgroundColor(Color.BLACK);
+		webView.setWebViewClient(new WebViewClient());
+		
 		WebSettings webViewSettings = webView.getSettings();
 		webViewSettings.setJavaScriptCanOpenWindowsAutomatically(true);
 		webViewSettings.setJavaScriptEnabled(true);
