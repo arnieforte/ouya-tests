@@ -24,7 +24,9 @@ public class MainActivity extends Activity {
 		this.webView = (WebView) findViewById(R.id.webView1);
 		webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
 		webView.setBackgroundColor(Color.BLACK);
-		webView.setWebViewClient(new WebViewClient());
+		
+		WebViewClient wvc = new OuyaWebViewClient();
+		webView.setWebViewClient(wvc);
 		
 		WebSettings webViewSettings = webView.getSettings();
 		webViewSettings.setJavaScriptCanOpenWindowsAutomatically(true);
@@ -56,29 +58,25 @@ public class MainActivity extends Activity {
 	    
 	    switch(keyCode) {
         case OuyaController.BUTTON_O:
-//        case KeyEvent.KEYCODE_BUTTON_A:
         	System.out.println("Got O");
         	webAppInterface.O = 1;
             handled = true;
             break;
 
         case OuyaController.BUTTON_U:
-//        case KeyEvent.KEYCODE_BUTTON_X;
         	System.out.println("Got U");
         	webAppInterface.U = 1;
             handled = true;
             break;
 
         case OuyaController.BUTTON_Y:
-//        case KeyEvent.KEYCODE_BUTTON_Y:
         	System.out.println("Got Y");
         	webAppInterface.Y = 1;
             handled = true;
             break;
 
 	    case OuyaController.BUTTON_A:
-//        case KeyEvent.KEYCODE_BUTTON_B:
-        	System.out.println("Got O");
+        	System.out.println("Got A");
         	webAppInterface.A = 1;
             handled = true;
             break;
