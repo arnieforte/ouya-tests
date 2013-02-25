@@ -32,12 +32,10 @@ public class WebAppInterface {
     public int buttonState_1;
     public int buttonState_2;
 
-    /** Instantiate the interface and set the context */
     WebAppInterface(Context c) {
         mContext = c;
     }
-    
-    // @ JavascriptInterface
+
     public void showToast(String toast) {
         Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
     }

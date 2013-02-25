@@ -37,7 +37,6 @@ public class MainActivity extends Activity {
 		webViewSettings.setBuiltInZoomControls(true);
 		webViewSettings.setPluginState(PluginState.ON);
 
-		// js-java bridge
 		this.webAppInterface = new WebAppInterface(this);
 		this.webView.addJavascriptInterface(webAppInterface, "xouya");
 		
