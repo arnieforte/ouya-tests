@@ -7,18 +7,30 @@ import tv.ouya.console.api.*;
 public class WebAppInterface {
     Context mContext;
 
-    public int O = 0;
-    public int U = 0;
-    public int Y = 0;
-    public int A = 0;
-    public float LS_X;
-    public float LS_Y;
-    public float RS_X;
-    public float RS_Y;
-    public float L2;
-    public float R2;
+    public int O_1 = 0;
+    public int U_1 = 0;
+    public int Y_1 = 0;
+    public int A_1 = 0;
+    public float LS_X_1;
+    public float LS_Y_1;
+    public float RS_X_1;
+    public float RS_Y_1;
+    public float L2_1;
+    public float R2_1;
     
-    public int buttonState;
+    public int O_2 = 0;
+    public int U_2 = 0;
+    public int Y_2 = 0;
+    public int A_2 = 0;
+    public float LS_X_2;
+    public float LS_Y_2;
+    public float RS_X_2;
+    public float RS_Y_2;
+    public float L2_2;
+    public float R2_2;
+    
+    public int buttonState_1;
+    public int buttonState_2;
 
     /** Instantiate the interface and set the context */
     WebAppInterface(Context c) {
@@ -30,52 +42,179 @@ public class WebAppInterface {
         Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
     }
     
-    public String getButtonState() {
-    	return "" + buttonState;
+    public String getButtonState(int controller) {
+    	String result = "";
+    	
+    	switch(controller) {
+    	case 1:
+    		result = "" + buttonState_1;
+    		break;
+    		
+    	case 2:
+    		result = "" + buttonState_2;
+    		break;
+    	}
+    	
+    	return result;
     }
     
-    public String getO() {
-    	//System.out.println("getO called, O:" + O);
-    	return "" + O;
+    public String getO(int controller) {
+    	String result = "";
+    	
+    	switch(controller) {
+    	case 1:
+    		result = "" + O_1;
+    		break;
+    		
+    	case 2:
+    		result = "" + O_2;
+    		break;
+    	}
+    	
+    	return result;
     }
 
-    public String getU() {
-    	//System.out.println("getU called, U:" + U);
-    	return "" + U;
-    }
-
-    public String getY() {
-    	//System.out.println("getY called, Y:" + Y);
-    	return "" + Y;
+    public String getU(int controller) {
+    	String result = "";
+    	
+    	switch(controller) {
+    	case 1:
+    		result = "" + U_1;
+    		break;
+    		
+    	case 2:
+    		result = "" + U_2;
+    		break;
+    	}
+    	
+    	return result;
     }
     
-    public String getA() {
-    	//System.out.println("getA called, A:" + A);
-    	return "" + A;
-    }
-
-    public float getLS_X() {
-    	return LS_X;
-    }
-
-    public float getLS_Y() {
-    	return LS_Y;
-    }
-
-    public float getRS_X() {
-    	return RS_X;
-    }
-
-    public float getRS_Y() {
-    	return RS_Y;
+    public String getY(int controller) {
+    	String result = "";
+    	
+    	switch(controller) {
+    	case 1:
+    		result = "" + Y_1;
+    		break;
+    		
+    	case 2:
+    		result = "" + Y_2;
+    		break;
+    	}
+    	
+    	return result;
     }
     
-    public float getL2() {
-    	return L2;
+    public String getA(int controller) {
+    	String result = "";
+    	
+    	switch(controller) {
+    	case 1:
+    		result = "" + A_1;
+    		break;
+    		
+    	case 2:
+    		result = "" + A_2;
+    		break;
+    	}
+    	
+    	return result;
     }
 
-    public float getR2() {
-    	return R2;
+    public float getLS_X(int controller) {
+    	float result = 0;
+    	
+    	switch(controller) {
+    	case 1:
+    		result = LS_X_1;
+    		break;
+    		
+    	case 2:
+    		result = LS_X_2;
+    		break;
+    	}
+    	
+    	return result;
+    }
+
+    public float getLS_Y(int controller) {
+    	float result = 0;
+    	
+    	switch(controller) {
+    	case 1:
+    		result = LS_Y_1;
+    		break;
+    		
+    	case 2:
+    		result = LS_Y_2;
+    		break;
+    	}
+    	
+    	return result;
+    }
+
+    public float getRS_X(int controller) {
+    	float result = 0;
+    	
+    	switch(controller) {
+    	case 1:
+    		result = RS_X_1;
+    		break;
+    		
+    	case 2:
+    		result = RS_X_2;
+    		break;
+    	}
+    	
+    	return result;
+    }
+
+    public float getRS_Y(int controller) {
+    	float result = 0;
+    	
+    	switch(controller) {
+    	case 1:
+    		result = RS_Y_1;
+    		break;
+    		
+    	case 2:
+    		result = RS_Y_2;
+    		break;
+    	}
+    	
+    	return result;
     }
     
+    public float getL2(int controller) {
+    	float result = 0;
+    	
+    	switch(controller) {
+    	case 1:
+    		result = L2_1;
+    		break;
+    		
+    	case 2:
+    		result = L2_2;
+    		break;
+    	}
+    	
+    	return result;
+    }
+
+    public float getR2(int controller) {
+    	float result = 0;
+    	
+    	switch(controller) {
+    	case 1:
+    		result = R2_1;
+    		break;
+    		
+    	case 2:
+    		result = R2_2;
+    		break;
+    	}
+    	
+    	return result;
+    }    
 }
