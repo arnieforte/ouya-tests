@@ -46,7 +46,6 @@ public class MainActivity extends Activity {
 	    boolean handled = false;
 	    System.out.println("keyCode: " + keyCode);
 	    
-/*		
 	    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());
 	    System.out.println("player:" + player);
 	    
@@ -84,7 +83,7 @@ public class MainActivity extends Activity {
             handled = true;
             break;
 	    }
-*/
+
 	    return handled || super.onKeyDown(keyCode, event);
 	}
 	
