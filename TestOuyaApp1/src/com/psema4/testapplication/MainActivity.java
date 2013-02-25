@@ -44,6 +44,18 @@ public class MainActivity extends Activity {
 	}
 	
 	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
+		boolean handled = false;
+		
+	    webAppInterface.O = 0;
+	    webAppInterface.U = 0;
+	    webAppInterface.Y = 0;
+	    webAppInterface.A = 0;
+		
+		return handled || super.onKeyDown(keyCode, event);
+	}
+	
+	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 	    boolean handled = false;
 	    System.out.println("keyCode: " + keyCode);
