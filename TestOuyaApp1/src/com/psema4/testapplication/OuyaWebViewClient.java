@@ -10,19 +10,16 @@ public class OuyaWebViewClient extends WebViewClient {
 		boolean result = false;
 		
 		switch(keyCode) {
+		case KeyEvent.KEYCODE_DPAD_UP:
+		case KeyEvent.KEYCODE_DPAD_DOWN:
+		case KeyEvent.KEYCODE_DPAD_LEFT:
+		case KeyEvent.KEYCODE_DPAD_RIGHT:
 		case KeyEvent.KEYCODE_BUTTON_A:
-			result = true;
-			break;
-		
 		case KeyEvent.KEYCODE_BUTTON_X:
-			result = true;
-			break;
-	
 		case KeyEvent.KEYCODE_BUTTON_Y:
-			result = true;
-			break;
-			
 		case KeyEvent.KEYCODE_BUTTON_B:
+		case KeyEvent.KEYCODE_BUTTON_L1:
+		case KeyEvent.KEYCODE_BUTTON_R1:
 			result = true;
 			break;
 		}
