@@ -43,5 +43,11 @@ label {
     color: #000;
     width: 4em;
     text-align: right;
-        }
+}
 
+#sdom {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+}

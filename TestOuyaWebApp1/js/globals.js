@@ -1,3 +1,5 @@
+window.messageCount = 0;
+
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
