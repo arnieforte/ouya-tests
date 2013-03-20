@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.HashMap;
 
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
 public class XOuyaController {
 	public Integer player;
@@ -44,6 +43,7 @@ public class XOuyaController {
 		dpad.put("right", 0);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public String getJSON() {
 		JSONObject cData;
 		

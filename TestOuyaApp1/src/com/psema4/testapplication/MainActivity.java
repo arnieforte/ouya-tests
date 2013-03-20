@@ -1,24 +1,16 @@
 package com.psema4.testapplication;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.MotionEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 import tv.ouya.console.api.*;
 
@@ -27,8 +19,8 @@ public class MainActivity extends Activity {
 	public WebAppInterface webAppInterface;
 	public List <XOuyaController> controllers = new ArrayList<XOuyaController>();
 	
+	public String url = "file:///android_asset/index.html";
 //	public String url = "http://projects.psema4.com/ouya/dc/index.html";
-	public String url = "http://192.168.0.143/ouya/dc/index.html";
 	
 	public enum XOuyaButton {
 		O, U, Y, A,
@@ -36,12 +28,13 @@ public class MainActivity extends Activity {
 		UP, DOWN, LEFT, RIGHT
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		this.webView = (WebView) findViewById(R.id.webView1);
+		webView = (WebView) findViewById(R.id.webView1);
 		webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
 		webView.setBackgroundColor(Color.BLACK);
 		
@@ -60,11 +53,9 @@ public class MainActivity extends Activity {
 		controllers.add(new XOuyaController(2));
 		controllers.add(new XOuyaController(3));
 
-		this.webAppInterface = new WebAppInterface(this, webView, controllers);
-		this.webView.addJavascriptInterface(webAppInterface, "xouya");
-
-		this.webView.loadUrl(url);
-		System.out.println("launched");
+		webAppInterface = new WebAppInterface(this, webView, controllers);
+		webView.addJavascriptInterface(webAppInterface, "xouya");
+		webView.loadUrl(url);
 	}
 	
 	public void clearButtons(Integer player) {

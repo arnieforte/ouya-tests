@@ -5,9 +5,6 @@ import java.util.List;
 import android.content.Context;
 import android.webkit.WebView;
 import android.widget.Toast;
-import tv.ouya.console.api.*;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 public class WebAppInterface {
     Context mContext;
