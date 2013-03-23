@@ -4,7 +4,7 @@ import android.webkit.WebViewClient;
 import android.webkit.WebView;
 import android.view.KeyEvent;
 
-public class OuyaWebViewClient extends WebViewClient {
+public class XOuyaWebViewClient extends WebViewClient {
 	public boolean shouldOverrideKeyEvent(WebView view, KeyEvent event) {
 		int keyCode = event.getKeyCode();
 		boolean result = false;
@@ -20,6 +20,8 @@ public class OuyaWebViewClient extends WebViewClient {
 		case KeyEvent.KEYCODE_BUTTON_B:
 		case KeyEvent.KEYCODE_BUTTON_L1:
 		case KeyEvent.KEYCODE_BUTTON_R1:
+		case KeyEvent.KEYCODE_BUTTON_THUMBL:
+		case KeyEvent.KEYCODE_BUTTON_THUMBR:
 			result = true;
 			break;
 		}
